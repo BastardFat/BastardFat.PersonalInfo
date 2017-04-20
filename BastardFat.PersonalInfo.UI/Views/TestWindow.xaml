@@ -1,0 +1,35 @@
+﻿<Window x:Class="BastardFat.PersonalInfo.UI.Views.TestWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:BastardFat.PersonalInfo.UI.ViewModels"
+        xmlns:local="clr-namespace:BastardFat.PersonalInfo.UI.Views"
+        mc:Ignorable="d"
+        Title="TestWindow" Height="541.767" Width="473.391">
+    <Window.DataContext>
+        <vm:TestWindowViewModel />
+    </Window.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="141"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <ListBox Margin="10,0,0,10" Grid.Row="1" ItemsSource="{Binding Collection, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" SelectedItem="{Binding SelectedItem, Mode=OneWayToSource}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Data}"></TextBlock>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button Content="Add" Margin="10,10,82,10" Command="{Binding AddCommand}"/>
+        <TextBox Grid.Column="1" Margin="10,0" TextWrapping="Wrap" Text="{Binding SelectedItem.Data, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" Grid.Row="1" Height="20" VerticalAlignment="Top"/>
+        <TextBox Grid.Column="1" Margin="10,10,10,7" TextWrapping="Wrap" Text="{Binding NewItem, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <Button Content="Delete" Margin="64,10,10,10" Command="{Binding DeleteCommand}"/>
+
+    </Grid>
+</Window>

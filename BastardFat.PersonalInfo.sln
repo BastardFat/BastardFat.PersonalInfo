@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BastardFat.PersonalInfo.UI", "BastardFat.PersonalInfo.UI\BastardFat.PersonalInfo.UI.csproj", "{2C91FB38-2C58-44EA-90DE-94735225B1B4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BastardFat.PersonalInfo.DatabaseInteraction", "BastardFat.PersonalInfo.DatabaseInteraction\BastardFat.PersonalInfo.DatabaseInteraction.csproj", "{A6579827-25FA-47B4-BA13-CA5B96582A95}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{2C91FB38-2C58-44EA-90DE-94735225B1B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C91FB38-2C58-44EA-90DE-94735225B1B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C91FB38-2C58-44EA-90DE-94735225B1B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6579827-25FA-47B4-BA13-CA5B96582A95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6579827-25FA-47B4-BA13-CA5B96582A95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6579827-25FA-47B4-BA13-CA5B96582A95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6579827-25FA-47B4-BA13-CA5B96582A95}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
